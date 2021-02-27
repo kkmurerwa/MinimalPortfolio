@@ -3,7 +3,7 @@
     --text-color-links: #0077c5;
     --bg-color-primary: #eceef1;
     --bg-color-primary-opacity: #eceef100;
-    --bg-color-alternate: white;
+    --bg-color-alternate: #f8f8ff;
     --text-color-subs: #666666;
     --bg-color-links: #486de9;
     --bg-color-links-hover: #001352;
@@ -88,6 +88,12 @@ li a:hover {
 .section-light {
     width: 100%;
     min-height: 100vh;
+    padding-bottom: var(--padding-top);
+    background-color: var(--bg-color-alternate);
+}
+
+.section-light-wrap {
+    width: 100%;
     padding-bottom: var(--padding-top);
     background-color: var(--bg-color-alternate);
 }
