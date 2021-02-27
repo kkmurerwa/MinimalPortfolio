@@ -1,13 +1,20 @@
 :root {
     --font-family: Helvetica, Arial, sans-serif;
-    --text-color-links: #888888;
-    --bg-color-primary: #fafafa;
+    --text-color-links: #0077c5;
+    --bg-color-primary: #eceef1;
+    --bg-color-primary-opacity: #eceef100;
     --bg-color-alternate: white;
     --text-color-subs: #666666;
     --bg-color-links: #486de9;
-    --bg-color-links-hover: #3855b4;
-    --padding-top: 15vh;
+    --bg-color-links-hover: #001352;
+    --padding-top: 10vh;
+    --padding-bottom: 2vh;
 }
+
+* {
+    margin: 0px;
+    padding: 0px;
+ }
 
 html {
     scroll-behavior: smooth;
@@ -25,13 +32,16 @@ body {
     width: 100%;
     text-align: center;
     margin: 0%;
-    background-color: var(--bg-color-primary);
-    position: fixed;
+    background-color: var(--bg-color-primary-opacity);
+    /* position: fixed; */
     top: 0;
+}
+.scrolled {
+    background-color: var(--bg-color-primary);
 }
 
 ul {
-    padding: 0%;
+    padding: 10px 0%;
 }
 
 li {
@@ -41,19 +51,25 @@ li {
 li a {
     text-decoration: none;
     color: var(--text-color-links);
-    margin: 0 10px;
+    padding: 10px;
 }
 
 li a:hover {
-    color: var(--bg-color-links);
+    color: var(--bg-color-links-hover);
+    cursor: pointer;
+    text-decoration: underline;
 }
 
-.header {
+.masthead {
     height: 100vh;
     width: 100%;
-    margin: 0%;
     text-align: center;
-    
+    background-color: var(--bg-color-primary);
+    background-image: url(../img/bg.svg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: 90%;    
 }
 
 .title {
@@ -64,25 +80,29 @@ li a:hover {
 
 .subtitle {
     font-size: 25px;
+    padding-top: 20;
     color: var(--text-color-subs);
-    margin: 20px 0 0 0;
+    margin: 0%;
 }
 
 .section-light {
     width: 100%;
     min-height: 100vh;
+    padding-bottom: var(--padding-top);
     background-color: var(--bg-color-alternate);
 }
 
 .section-dark {
     width: 100%;
     min-height: 100vh;
+    padding-bottom: var(--padding-top);
     background-color: var(--bg-color-primary);
 }
 
 .section-title {
     font-size: 50px;
     padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
     color: var(--text-color-subs);
 }
 
@@ -132,14 +152,11 @@ textarea {
 
 .footer {
     background-color: var(--bg-color-primary);
+    padding: 20px 0;
 }
 
 .footer p {
     text-align: center;
-}
-
-.footer a {
-    text-decoration-line: underline;
 }
 
 .copyright {
@@ -148,7 +165,12 @@ textarea {
 
 @media only screen and (max-width: 500px) {
     .title {
-        font-size: 40px;
+        font-size: 50px;
+        padding-top: 20vh;
+    }
+
+    .subtitle {
+        padding-top: 30px;
     }
 
     p {
