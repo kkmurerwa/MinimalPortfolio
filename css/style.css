@@ -113,9 +113,17 @@ li a:hover {
 }
 
 p {
-    text-align: justify;
+    text-align: left;
     padding: 0% 60px;
+    line-height: 40px;
+}
+
+.text-small {
+    font-size: 18px;
+    text-align: center;
     line-height: 30px;
+    font-style: italic;
+    font-family: "Droid Serif";
 }
 
 .contact-form {
